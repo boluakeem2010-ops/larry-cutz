@@ -1,3 +1,4 @@
+
 import "./App.css";
 
 // PLACEHOLDER: Replace with the shop's verified WhatsApp number.
@@ -8,7 +9,7 @@ const createWhatsAppLink = (message: string) =>
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 
 const WHATSAPP_LINK = createWhatsAppLink(
-  "Hello LARRY-CUTZ! I'd like to ask about your haircut services and appointments.",
+  "Hello LARRY-CUTZ! I'd like to book a haircut. Please let me know your prices and available appointment times.",
 );
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <a className="brand" href="#">
           LARRY<span>-CUTZ</span>
         </a>
+
         <nav>
           <a href="#services">Services</a>
           <a href="#gallery">Gallery</a>
@@ -39,17 +41,14 @@ function App() {
         <section className="hero">
           <div className="hero-content">
             <p className="eyebrow">YOUR STYLE. YOUR CONFIDENCE.</p>
-
             <h1>
               A fresh cut.
               <br />A fresh start.
             </h1>
-
             <p className="hero-text">
               Great style starts with the right barber. Visit us for a clean,
               confident look.
             </p>
-
             <a
               className="primary-button"
               href={WHATSAPP_LINK}
@@ -76,7 +75,7 @@ function App() {
             <a
               className="service-card"
               href={createWhatsAppLink(
-                "Hello LARRY-CUTZ! I'd like to ask about your classic haircut service.",
+                "Hello LARRY-CUTZ! I'd like to book a classic haircut. Please let me know the price and available appointment times.",
               )}
               target="_blank"
               rel="noopener noreferrer"
@@ -93,7 +92,7 @@ function App() {
             <a
               className="service-card"
               href={createWhatsAppLink(
-                "Hello LARRY-CUTZ! I'd like to ask about your fade haircut service.",
+                "Hello LARRY-CUTZ! I'd like to book a fade haircut. Please let me know the price and available appointment times.",
               )}
               target="_blank"
               rel="noopener noreferrer"
@@ -110,7 +109,7 @@ function App() {
             <a
               className="service-card"
               href={createWhatsAppLink(
-                "Hello LARRY-CUTZ! I'd like to ask about your beard grooming service.",
+                "Hello LARRY-CUTZ! I'd like to book beard grooming. Please let me know the price and available appointment times.",
               )}
               target="_blank"
               rel="noopener noreferrer"
@@ -146,7 +145,6 @@ function App() {
                 loading="lazy"
               />
             </div>
-
             <div className="gallery-item">
               <img
                 src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=85"
@@ -154,7 +152,6 @@ function App() {
                 loading="lazy"
               />
             </div>
-
             <div className="gallery-item">
               <img
                 src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=85"
@@ -187,7 +184,6 @@ function App() {
             Have a style in mind? Get in touch to ask about services, prices and
             appointment availability.
           </p>
-
           <a
             className="primary-button"
             href={WHATSAPP_LINK}
@@ -196,13 +192,35 @@ function App() {
           >
             Chat with the barber ↗
           </a>
-
           <p className="contact-note">
             Please confirm appointment availability with the shop.
           </p>
         </section>
       </main>
 
+      {/* Footer section starts here */}
+      <footer className="footer">
+        <a className="brand" href="#">
+          LARRY<span>-CUTZ</span>
+        </a>
+
+        <p>Sharp cuts. Fresh confidence.</p>
+
+        <nav className="footer-nav" aria-label="Footer navigation">
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <a className="back-to-top" href="#">
+          Back to top ↑
+        </a>
+
+        <p className="footer-copy">
+          © {new Date().getFullYear()} LARRY-CUTZ. All rights reserved.
+        </p>
+      </footer>
     </div>
   );
 }
