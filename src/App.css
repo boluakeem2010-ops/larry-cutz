@@ -519,6 +519,7 @@ a.service-card:focus-visible {
 }
 
 /* Tablet and mobile */
+
 @media (max-width: 768px) {
   .navbar {
     position: relative;
@@ -553,5 +554,114 @@ a.service-card:focus-visible {
 
   .navbar .nav-button {
     order: 2;
+  }
+}
+
+/* Fix: mobile menu must stay hidden until clicked */
+@media (max-width: 768px) {
+  .navbar nav.main-navigation {
+    display: none !important;
+  }
+
+  .navbar nav.main-navigation.menu-open {
+    display: flex !important;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0;
+    order: 3;
+    padding: 8px 0;
+    background: #0b0b0b;
+  }
+}
+
+/* Customer reviews section */
+.reviews {
+  padding: 90px 8%;
+  background: #101010;
+  text-align: center;
+}
+
+.reviews h2 {
+  margin-bottom: 14px;
+}
+
+.reviews-intro {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  color: #bdbdbd;
+  line-height: 1.8;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 36px;
+  text-align: left;
+}
+
+.review-card {
+  padding: 28px 24px;
+  background: #181818;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 12px;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  border-color: #d4af37;
+}
+
+.review-mark {
+  display: block;
+  color: #d4af37;
+  font-size: 3rem;
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+
+.review-card h3 {
+  margin: 18px 0 12px;
+  color: #fff;
+  font-size: 1.15rem;
+}
+
+.review-card p {
+  color: #bdbdbd;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.review-author {
+  display: block;
+  color: #d4af37;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Responsive reviews */
+@media (max-width: 900px) {
+  .reviews-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .reviews {
+    padding: 64px 5%;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .review-card {
+    padding: 24px 20px;
   }
 }
