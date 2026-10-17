@@ -233,7 +233,7 @@ function App() {
           </p>
         </section>
 
-        {/* Customer reviews demo section */}
+        
 
         <section className="reviews" id="reviews">
           <p className="eyebrow">THE WORD ON THE STREET</p>
